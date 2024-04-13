@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    body{
+      background-color: black;
+      font-family: sans-serif;
+      font-size: 16px;
+      margin: 0;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 100vh;
+    }
+    .qa_box{
+      width: 500px;
+      padding: 20px;
+      height: 450px;
+      background-color: black;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      box-shadow: 1px 1px 10px 0.5px purple;
+
+    }
+    .qa_header{
+      background-color:purple;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      margin: -20px -20px 20px;
+      border-radius: 15px 15px 0 0;
+      font-size: 20px;
+    }
+    .qa_set{
+      display:block;
+    }
+    .qa_set .active{
+      display: block;
+    }
+    .qa_set h2{
+      margin: 0 0 25px;
+      font-size: 25px;
+      color: white;
+      border-top: 2px solid purple;
+      padding-top: 15px;
+    }
+    .qa_ans_row{
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .qa_ans_row input{
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+
+    }
+    .qa_ans_row span{
+      display: block;
+      font-size: 18px;
+      
+      padding: 8px 15px;
+      border: 2px solid grey;
+      border-radius: 20px;
+     color: white;
+      transition: all 0.3s ease-out;
+    }
+    .qa_ans_row:hover span{
+      background-color: rgba(255, 255, 255, .1);
+    }
+    .qa_ans_row input:checked + span{
+      background-color:#f93c3c ;
+    }
+    .qa_ans_row input[valid]:checked + span{
+      background-color: green;
+      color: white;
+    }
+    .qa_footer{
+      padding: 8px 0 0;
+      text-align: right;
+      border-top: 2px solid purple;
+      padding-top: 20px;
+    }
+    .btn1{
+      box-shadow: 2px 2px 10px 0.5px purple;
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: antiquewhite;
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .btn1:hover{
+      background-color: white;
+    }
+    .quiz-box h1{
+      top: 0;
+      font-size: 32px;
+      text-align: center;
+      background: linear-gradient(45deg,transparent,purple,transparent);
+      border-radius: 6px;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="qa_box">
+ 
+  <div class="quiz-box">
+    <h1>Quiz</h1>
+  <div class="qa_body">
+    
+    <div class="qa_set active">
+      <h2>1. What does CSS stand for?</h2>
+      <div class="qa_ans_row">
+        <input type="radio" name="a1" valid="valid">
+        <span>Cascading style sheet</span>
+      </div>
+      <div class="qa_ans_row">
+        <input type="radio" name="a1">
+        <span>Colourful style sheet</span>
+      </div>
+      <div class="qa_ans_row">
+        <input type="radio" name="a1">
+        <span>Creative style sheet</span>
+      </div>
+      <div class="qa_ans_row">
+        <input type="radio" name="a1">
+        <span>Computer style sheet</span>
+      </div>
+      <div class="qa_footer">
+    <span class="btn1" id="skip"> <a href="new2.html"><b>Next</b></a> </span>
+  </div>
+    </div>
+  </div>
